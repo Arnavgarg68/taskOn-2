@@ -1,0 +1,241 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  /* background-color: skyblue; */
+  background: url('./components/design-background-for-my-to-do-website.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.main-entry{
+  /* background-color: white; */
+  margin-top: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.log-or-sign{
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px inset black;
+  padding: 10px;
+  text-align: center;
+  /* background-color: rgba(95, 95, 95, 0.281); */
+  background-color: rgba(255, 255, 255, 0.521);
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  /* transition: box-shadow 0.3s ease; */
+  animation: shadowlog 1s infinite alternate;
+}
+.log-or-sign input{
+  /* color: aqua; */
+  font-style: italic;
+  background-color: transparent;
+  margin: 5vh auto;
+  height: 5vh;
+  width: 70%;
+  padding: 4px;
+  border: 0;
+  border-bottom: 1px solid grey;
+  outline: none;
+}
+input::placeholder{
+  /* color: aqua; */
+  font-style: italic;
+  font-size: 1.3rem;
+}
+.log-or-sign button{
+  color: white;
+  background-color: rgb(108, 108, 214);
+  min-width: 30%;
+  max-width: 50%;
+  margin: 2vh auto;
+  height: 5vh;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  /* box-shadow: 0px 0px 8px rgb(0, 0, 0); */
+  /* transition: box-shadow 0.3s ease; */
+  animation: shadowAnimation 1s infinite alternate;
+}
+.log-or-sign button:hover{
+  border: 1px solid rgb(54, 54, 128);
+}
+
+/*shadow animation*/
+@keyframes shadowlog {
+  0%{}
+  100%{
+  box-shadow: 0px 0px 6px inset rgb(51, 51, 51);
+
+  }
+}
+@keyframes shadowAnimation{
+  0%{
+  box-shadow: 0px 0px 15px rgb(0, 0, 0);
+  }
+  100%{
+  box-shadow: 0px 0px 15px rgb(72, 40, 255);
+
+  }
+}
+
+/*media for <800 px login and sign up*/
+@media screen and (max-width: 800px) {
+  body{
+    background: url("./components/2150964633.jpg");
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  }
+  .main-entry{
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+  }
+  .log-or-sign{
+    width: 90%;
+    margin-top: 2vh;
+  }
+}
+
+/*taskpage css*/
+
+.text-head{
+  margin-top: 3vh;
+}
+.user-card{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  max-width:80vw;
+  height: fit-content;
+  /* position: relative;
+  top: 6vh;
+  left: 12vw; */
+  padding: 10px;
+  margin: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 7px black ;
+}
+.user-card-data{
+  /* margin: 10p; */
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  margin: 10px;
+  /* max-width: 80% ; */
+  font-size: 1.5rem;
+}
+.taskcounter{
+  font-size: 2rem;
+}
+.tasks{
+  margin-top: 4vh;
+  display: flex;
+  flex-direction: column-reverse;
+  /* justify-content: center; */
+  /* background-color: beige; */
+  align-items: center; 
+}
+.task{
+  /* max-width: 0%; */
+  background-color: white;
+  width: 60vw;
+  padding: 15px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px black;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  height: 10vh;
+}
+.task input[type="checkbox"]{
+  transform: scale(1.5);
+  accent-color: rgb(22, 168, 22);
+  /* border: 1px solid black; */
+  border: 2px solid red;
+  border: 0;
+  background-color: aqua;
+}
+.taskname-div{
+  width: 70%;
+  font-size: 1.2rem;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* justify-self: center; */
+  align-self: center;
+  /* background-color: orange; */
+  text-align: center;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  padding: 3px;
+}
+.task button{
+  width: 15%;
+  font-size: 0.8rem;
+  /* background-color: grey; */
+  border: 0;
+  /* margin-right: 2px; */
+  /* color: white; */
+  font-weight: bold;
+  font-style: italic;
+}
+/*this is for add task input*/
+.input-task-area{
+  margin: 10vh auto;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+}
+.input-task-area input{
+  width: 80%;
+  height: 7vh;
+  padding: 15px;
+  border-radius: 10px;
+  margin-right: 10px;
+  border: 0;
+  outline: none;
+  font-style: italic;
+}
+.input-task-area button{
+  height: 90%;
+  border-radius: 5px;
+  /* width: 10%; */
+  white-space: nowrap;
+  padding: 5px;
+  border: 0;
+  box-shadow: 0px 0px 2px black ;
+  font-weight: 500;
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+}
+.input-task-area button:hover{
+  box-shadow: 0px 0px 7px black;
+}
+@media(max-width:700px){
+  .user-card{
+    width: 90vw;
+  }
+  .user-card-data{
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .input-task-area{
+    width: 90vw;
+  }
+  .tasks{
+    background-color: aqua;
+  }
+  .task{
+    width: 90vw;
+  }
+}
