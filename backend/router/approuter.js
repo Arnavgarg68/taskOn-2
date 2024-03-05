@@ -24,7 +24,12 @@ router.post("/Login",async(req,res)=>{
         res.status(400).json({error:error.message})
     }
 })
+//get vercel basic
+router.get("/",async(req,res)=>{
+    res.json="hello bhailog"
+});
 //get endpoint for / path or default page data get all user tasks
+
 router.get("/:id",async(req,res)=>{
     const {id}=req.params;
     try{
